@@ -1,0 +1,68 @@
+todo esto es mas simple de lo que parece, veras
+
+VARIABLES
+Las variables son datos que guardamos para usar, y se pueden modificar. imagina el marcador de un 
+partido de futbol, tenemos una variable por equipo que comienza en 0.
+equipo1 = 0;
+equipo2 = 0;
+y como vayan metiendo goles, se van modificando.
+
+STRINGS
+los strings (cadena en ingles), son textos que se escriben entre comillas "", al hacerlo asi el sistema
+reconocera inmediatamente que se trata de una cadena de texto, de lo contrario, el sistema lo 
+reconocera como una variable mas, o como error.
+
+FUNCIONES
+las funciones, como el nombre lo indica, funcionan para algo, para lo que sea que uno quiera, aqui la 
+idea es que si vas a repetir el mismo codigo en difrerentes partes, en vez de repetirlo 
+muchas veces, lo metes en una funcion y la llamas siempre que se ocupe.
+tomemos de ejemplo el marcador de futbol.
+
+function gol(equipo){
+	equipo += 1;
+	return equipo;
+} 
+console.log("equipo 1: " + equipo1 + " - Equipo 2: " + equipo2);
+
+examinemos cada parte del ejemplo anterior
+primero: creamos una funcion y le damos nombre, y entre parentesis ponemos ARGUMENTOS los que sean necesarios,
+		estos son variables que elegimos para que sean usadas dentro de la funcion.
+
+segundo: dentro del codigo de la funcion, lo que esta dentro de las llaves { } , toma la variable que pusimos
+		dentro del parentesis de ARGUMENTOS, y le suma 1, y al final le decimos que haga un 'return' del
+		ARGUMENTO que uso para que lo podamos usar despues.
+
+al final: fuera de la funcion usamos ese dato que nos regreso, para usarlo en un console.log, que sirbe
+		para imprimir en consola lo que hay dentro de los parentesis, primero un string que diga 
+		"equipo 1" mas la variable del equipo 1, mas otro string que dice "equipo 2" mas el dato de la variable 
+		del equipo 2.
+
+entonces si el equipo 2 mete un gol, solo llamamos a la funcion y en el ARGUMENTO le monemos la variable equipo2
+gol(equipo2);
+console.log("equipo 1: " + equipo1 + " - Equipo 2: " + equipo2);
+
+como resultado nos mostrara:
+Equipo 1: 0 - Equipo 2: 1
+
+
+DECLARIOCION if
+La declaracion 'if' es una condicion que se debe cumplir para ejecutarse, en ingles 'if' significa 'cuando' o 'si esto sucede'.
+para que se pueda ejecutar el codigo dentro de las llaves, debe cumplirse la condicion que se especifica en los parentesis.
+por ejemplo, el siguiente ejemplo se podria leer como 'si ruedas es igual a 2, imprimira en la consola: "es una bici!"'.
+
+if (ruedas == 2){
+	console.log("es una bici!");
+}
+
+
+Valores booleanos (`true`, `false`)
+los valores booleanos quieren decir cierto`true` o falso `false`, tambien se puede interpretar como 1 o 0.
+En el siguiente ejemplo, digamos que vas al cine, te piden voleto, si tienes quiere decir que es cierto y te dejaran pasar,
+pero si no tienes voleto es false, por lo que no te dejaran pasar. 
+
+if (voleto == true){
+	console.log("puede pasar");
+}
+if (voleto == false){
+	console.log("no puede pasar");
+}
